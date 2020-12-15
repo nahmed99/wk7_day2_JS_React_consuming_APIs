@@ -1,3 +1,11 @@
+.the-para {
+  padding: 25px;
+  background-color: powderblue;
+  margin: 25px;
+  border-radius: 10px;
+}
+
+
 .App {
   text-align: center;
 }
