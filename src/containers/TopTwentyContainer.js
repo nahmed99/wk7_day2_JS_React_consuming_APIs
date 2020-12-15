@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const { default: TopTwentyDetails } = require("../components/TopTwentyDetails")
 
@@ -10,7 +10,7 @@ const TopTwentyContainer = () => {
     // Get the data from website
     const getTopTwenty = () => {
         fetch(`https://itunes.apple.com/gb/rss/topsongs/limit=20/json`).then((res) => {
-            return res.json.then((data) => {
+            return res.json().then((data) => {
                 setTopTwenty(data);
             });
         });
@@ -23,7 +23,7 @@ const TopTwentyContainer = () => {
     return (
         <>
             <h1>This is the T20 Container</h1>
-            <TopTwentyDetails />
+            <TopTwentyDetails topTwenty={topTwenty}/>
         </>
 
     )

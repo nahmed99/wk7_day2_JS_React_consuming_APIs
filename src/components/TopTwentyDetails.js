@@ -1,4 +1,4 @@
-const TopTwentyDetails = () => {
+const TopTwentyDetails = ({topTwenty}) => {
 
     // Don't render TopTwentyDetails unless 'toptwenty' actually contains data
     if (!topTwenty) {
