@@ -12,6 +12,8 @@ const TopTwentyDetails = ({topTwenty}) => {
     const topTwentyNodes = topTwenty.map(theHit => {
         chartPos += 1;
 
+        // The key attribute is required by React - helps it keep
+        // tabs on each item/row with a unique id...
         return (
           <TheHit 
             chartPos={chartPos}
