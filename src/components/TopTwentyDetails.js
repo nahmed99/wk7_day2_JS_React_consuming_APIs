@@ -18,6 +18,7 @@ const TopTwentyDetails = ({topTwenty}) => {
             title={theHit["im:name"].label}
             artist={theHit["im:artist"].label}
             image={theHit["im:image"][0].label}
+            key={theHit.id.attributes["im:id"]}
             >
           </TheHit>
         );
